@@ -25,4 +25,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # BACKEND
 
-Clone repository and open the folder Backend in any IDE with maven dependencies (IntelliJ, Eclipse, NetBeans). Run `Application.java`, it will run the server with [Spring](https://spring.io/). Navigate to `http://localhost:8080/`, the frontend makes calls to that API.
+Clone repository and open the folder Backend in any IDE with maven dependencies (IntelliJ, Eclipse, NetBeans). Run `Application.java`, it will set up the server with [Spring](https://spring.io/). Navigate to `http://localhost:8080/`, the frontend makes calls to that API.
