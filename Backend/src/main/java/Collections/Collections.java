@@ -18,6 +18,8 @@ public class Collections {
         return ourInstance;
     }
 
+    public static final String route = "api/v1/";
+
     private static List<Vertex> nodes;
 
     private static List<Edge> edges;

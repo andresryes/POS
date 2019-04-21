@@ -51,8 +51,12 @@ public class ProductsBST {
         return search(root.right, key);
     }
 
+    public boolean edit(Product newProduct){
+       return edit(root, newProduct);
+    }
+
     public boolean edit(Node root, Product newProduct){
-        Node foundNode = search(this.root, newProduct.getIdProduct()+"");
+        Node foundNode = search(root, newProduct.getIdProduct()+"");
         if(foundNode != null){
             foundNode.key = newProduct;
             return true;
