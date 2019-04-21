@@ -1,7 +1,7 @@
 # POS
 POS using Java as backend and AngularJS for the frontend.
 
-#FRONTEND
+# FRONTEND
 
 ## Development server
 
@@ -23,6 +23,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#BACKEND
+# BACKEND
 
 Clone repository and open the folder Backend in any IDE with maven dependencies (IntelliJ, Eclipse, NetBeans). Run `Application.java`, it will run the server with [Spring](https://spring.io/). Navigate to `http://localhost:8080/`, the frontend makes calls to that API.
