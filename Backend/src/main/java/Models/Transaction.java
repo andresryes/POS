@@ -7,6 +7,9 @@ public class Transaction {
     private TransactionDetail[] transactions;
     private double total;
 
+    public Transaction() {
+    }
+
     public Transaction(int idTransaction, Customer customer, User user, TransactionDetail[] transactions, double total) {
         this.idTransaction = idTransaction;
         this.customer = customer;

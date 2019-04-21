@@ -30,7 +30,12 @@ public class CustomersBST {
     {
         root = null;
     }
-    // search function
+    // search function by ID
+    public Customer searchByID(String key){
+        return  search(root, key).key;
+    }
+
+    //search function
     public Node search(Node root, String key)
     {
         // Base Cases: root is null or key is present at root

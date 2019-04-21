@@ -22,4 +22,6 @@ public class ProductController {
     public ArrayList<Product> products() {
         return Collections.getInstance().getProducts().getList();
     }
+
+
 }

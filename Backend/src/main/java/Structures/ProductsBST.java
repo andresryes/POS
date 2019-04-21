@@ -30,6 +30,12 @@ public class ProductsBST {
     {
         root = null;
     }
+
+    //search by ID
+    public Product searchByID(String key){
+        return search(root, key).key;
+    }
+
     // search function
     public Node search(Node root, String key)
     {
