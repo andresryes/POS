@@ -44,7 +44,7 @@ public class ProductsBST {
             return root;
 
         // val is greater than root's key
-        if (root.key.getName().compareTo(key) > 0)
+        if ((root.key.getIdProduct()+"").compareTo(key) > 0)
             return search(root.left, key);
 
         // val is less than root's key
@@ -156,8 +156,34 @@ public class ProductsBST {
         }
     }
 
+    // This method mainly calls InorderRec()
+    public void inorder(String key)
+    {
+        inorderRec(root, key);
+    }
+
+    // A utility function to do inorder traversal of BST
+    public void inorderRec(Node root, String key)
+    {
+        if (root != null)
+        {
+            inorderRec(root.left, key);
+           //System.out.println(root.key.getName().contains(key));
+            if(root.key.getName().contains(key)){
+                products.add(root.key);
+            }
+            //System.out.print(root.key.getName() + " ");
+            inorderRec(root.right, key);
+        }
+    }
+
     public ArrayList<Product> getList(){
         inorder();
+        return products;
+    }
+
+    public ArrayList<Product> getListFiltered(String key){
+        inorder(key);
         return products;
     }
 
@@ -165,5 +191,8 @@ public class ProductsBST {
         return length;
     }
 
+    public void cleanList(){
+        products.clear();
+    }
 
 }

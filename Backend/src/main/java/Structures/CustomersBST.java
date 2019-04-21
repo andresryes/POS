@@ -43,7 +43,7 @@ public class CustomersBST {
             return root;
 
         // val is greater than root's key
-        if (root.key.getName().compareTo(key) > 0)
+        if ((root.key.getIdCustomer()+"").compareTo(key) > 0)
             return search(root.left, key);
 
         // val is less than root's key
