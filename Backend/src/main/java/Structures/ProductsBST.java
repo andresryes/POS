@@ -9,6 +9,7 @@ public class ProductsBST {
 
     private static int length = 0;
     private static ArrayList<Product> products = new ArrayList<>();
+    private static Product product = new Product();
     /* Class containing left and right child of current node and key value*/
     class Node
     {
@@ -32,8 +33,37 @@ public class ProductsBST {
     }
 
     //search by ID
-    public Product searchByID(String key){
+    /*public Product searchByID(String key){
         return search(root, key).key;
+    }*/
+
+    public Product searchByID(String id){
+        inorderSearch(id);
+        Product productToReturn = new Product();
+        productToReturn = product;
+        product = new Product();
+        return  productToReturn;
+    }
+
+    // This method mainly calls InorderRec()
+    public void inorderSearch(String key)
+    {
+       inorderRecSearch(root, key);
+    }
+
+    // A utility function to do inorder traversal of BST
+    public void inorderRecSearch(Node root, String key)
+    {
+        if (root != null)
+        {
+            inorderRecSearch(root.left, key);
+            //System.out.println(root.key.getName().contains(key));
+            if(root.key.getIdProduct()==Integer.parseInt(key)){
+                product = root.key;
+            }
+            //System.out.print(root.key.getName() + " ");
+            inorderRecSearch(root.right, key);
+        }
     }
 
     // search function
@@ -56,8 +86,9 @@ public class ProductsBST {
     }
 
     public boolean edit(Node root, Product newProduct){
-        Node foundNode = search(root, newProduct.getIdProduct()+"");
-        if(foundNode != null){
+        Product foundProduct = searchByID(newProduct.getIdProduct()+"");
+        Node foundNode = search(root,foundProduct.getName());
+        if(foundNode!=null){
             foundNode.key = newProduct;
             return true;
         }else{
@@ -124,7 +155,6 @@ public class ProductsBST {
     /* A recursive function to insert a new key in BST */
     public Node insertRec(Node root, Product key)
     {
-
         /* If the tree is empty, return a new node */
         if (root == null)
         {
@@ -133,11 +163,12 @@ public class ProductsBST {
         }
 
         /* Otherwise, recur down the tree */
-        if (key.getName().compareTo(root.key.getName()) < 0)
+        if (key.getName().compareTo(root.key.getName()) < 0) {
             root.left = insertRec(root.left, key);
-        else if (key.getName().compareTo(root.key.getName()) > 0)
+            System.out.println("Insert");
+        }else if (key.getName().compareTo(root.key.getName()) > 0) {
             root.right = insertRec(root.right, key);
-
+        }
         /* return the (unchanged) node pointer */
         return root;
     }

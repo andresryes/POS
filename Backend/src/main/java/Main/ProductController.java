@@ -1,8 +1,10 @@
 package Main;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 import Collections.Collections;
+import Models.Category;
 import Models.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -56,24 +58,24 @@ public class ProductController {
                               @RequestParam(value="name") String name,
                               @RequestParam(value="description") String description){
         Product product = new Product();
-        product.setCategory(Collections.getCategories().get(idCategory-1));
+        product.setCategory(Collections.getInstance().getCategories().get(idCategory-1));
         product.setName(name);
         product.setPrice(price);
         product.setDescription(description);
-        product.setIdProduct(Collections.getProducts().getLength()+1);
+        product.setIdProduct(Collections.getInstance().getProducts().getLength()+1);
         product.setImage(image);
         product.setStock(stock);
 
-        Collections.getProducts().insert(product);
+        Collections.getInstance().getProducts().insert(product);
 
-        return product;
+        return Collections.getInstance().getProducts().searchByID(product.getIdProduct()+"");
 
     }
 
 
     @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping(Collections.route+"product/{id}")
-    public ResponseEntity deleteProduct(@PathVariable String id) {
+    public boolean deleteProduct(@PathVariable String id) {
         Product toDelete = new Product();
         try{
             toDelete = Collections.getInstance().getProducts().searchByID(id);
@@ -81,21 +83,17 @@ public class ProductController {
             toDelete = null;
             System.out.println(e.toString());
         }
-        if(toDelete!=null){
-            Collections.getProducts().deleteKey(toDelete);
-            return ResponseEntity
-                    .status(HttpStatus.OK)
-                    .body("The product with ID: "+id+" was deleted successfully.");
+        if(toDelete.getIdProduct()!=0){
+            Collections.getInstance().getProducts().deleteKey(toDelete);
+            return true;
         }else{
-            return ResponseEntity
-                    .status(HttpStatus.FORBIDDEN)
-                    .body("The product with ID: "+id+" was not found.");
+            return false;
         }
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping(Collections.route+"product/{id}")
-    public ResponseEntity editProduct(@PathVariable String id,
+    public boolean editProduct(@PathVariable String id,
                                       @RequestParam(value="stock") int stock,
                                       @RequestParam(value="price") double price,
                                       @RequestParam(value="idCategory") int idCategory,
@@ -110,24 +108,22 @@ public class ProductController {
             toEdit = null;
             System.out.println(e.toString());
         }
-        if(toEdit!=null){
-            toEdit.setCategory(Collections.getCategories().get(idCategory-1));
+        if(toEdit.getIdProduct()!=0){
+            toEdit.setCategory(Collections.getInstance().getCategories().get(idCategory-1));
             toEdit.setName(name);
             toEdit.setPrice(price);
             toEdit.setDescription(description);
             toEdit.setImage(image);
             toEdit.setStock(stock);
 
-            Collections.getProducts().edit(toEdit);
-            return ResponseEntity
-                    .status(HttpStatus.OK)
-                    .body("The product with ID: "+id+" was edited successfully.");
+            Collections.getInstance().getProducts().edit(toEdit);
+            return true;
         }else{
-            return ResponseEntity
-                    .status(HttpStatus.FORBIDDEN)
-                    .body("The product with ID: "+id+" was not found.");
+            return false;
         }
     }
 
-
+    public static void finishedAddingProduct(Product product){
+        Collections.products.insert(product);
+    }
 }

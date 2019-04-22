@@ -24,15 +24,15 @@ public class Collections {
 
     private static List<Edge> edges;
 
-    public static final ProductsBST products = new ProductsBST();
+    public static  ProductsBST products = new ProductsBST();
 
-    public static final ArrayList<Category> categories = new ArrayList<>();
+    public static  ArrayList<Category> categories = new ArrayList<>();
 
-    public static final CustomersBST customers = new CustomersBST();
+    public static  CustomersBST customers = new CustomersBST();
 
-    public static final ArrayList<User> users = new ArrayList<>();
+    public static  ArrayList<User> users = new ArrayList<>();
 
-    public static final TransactionsBTree transactions = new TransactionsBTree();
+    public static  TransactionsBTree transactions = new TransactionsBTree();
 
     public static PlacesGraph placesGraph;
 

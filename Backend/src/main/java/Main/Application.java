@@ -21,20 +21,20 @@ public class Application {
     public static void initializedProgram(){
         //Products
         for(int i = 1; i<11; i++){
-            Collections.getProducts().insert(new Product(i, i+10, i*50, new Category(1, "technology"), "resources/image.png", "iPhone" + i, "this is an iPhone"));
+            Collections.getInstance().getProducts().insert(new Product(i, i+10, i*50, new Category(1, "technology"), "resources/image.png", "iPhone" + i, "this is an iPhone"));
         }
 
         //Categories
-        Collections.getCategories().add(new Category(1, "technology"));
-        Collections.getCategories().add(new Category(2, "home"));
+        Collections.getInstance().getCategories().add(new Category(1, "technology"));
+        Collections.getInstance().getCategories().add(new Category(2, "home"));
 
         //Customers
-        Collections.getCustomers().insert(new Customer(1, "Andres Bolanos", "City", "94761795"));
-        Collections.getCustomers().insert(new Customer(2, "Gabryela Hernandez", "City", "1745972"));
+        Collections.getInstance().getCustomers().insert(new Customer(1, "Andres Bolanos", "City", "94761795"));
+        Collections.getInstance().getCustomers().insert(new Customer(2, "Gabryela Hernandez", "City", "1745972"));
 
         //Users
-        Collections.getUsers().add(new User(1, "admin", "andresryes", "12345"));
-        Collections.getUsers().add(new User(2, "cashier", "cashier1", "12345"));
+        Collections.getInstance().getUsers().add(new User(1, "admin", "andresryes", "12345"));
+        Collections.getInstance().getUsers().add(new User(2, "cashier", "cashier1", "12345"));
 
         //Transactions
         Transaction transaction = new Transaction();
@@ -49,7 +49,7 @@ public class Application {
         transactionDetails[0] = transactionDetail;
         transaction.setTransactions(transactionDetails);
 
-        Collections.getTransactions().insert(transaction);
+        Collections.getInstance().getTransactions().insert(transaction);
 
         //Places
         List<Vertex> nodes = Collections.getInstance().getNodes();
