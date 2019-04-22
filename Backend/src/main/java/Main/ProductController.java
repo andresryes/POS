@@ -110,20 +110,20 @@ public class ProductController {
         }
         if(toEdit.getIdProduct()!=0){
             toEdit.setCategory(Collections.getInstance().getCategories().get(idCategory-1));
-            toEdit.setName(name);
             toEdit.setPrice(price);
             toEdit.setDescription(description);
             toEdit.setImage(image);
             toEdit.setStock(stock);
-
-            Collections.getInstance().getProducts().edit(toEdit);
+            if(toEdit.getName().equals(name)){
+                Collections.getInstance().getProducts().edit(toEdit);
+            }else{
+                Collections.getInstance().getProducts().deleteKey(toEdit);
+                toEdit.setName(name);
+                Collections.getInstance().getProducts().insert(toEdit);
+            }
             return true;
         }else{
             return false;
         }
-    }
-
-    public static void finishedAddingProduct(Product product){
-        Collections.products.insert(product);
     }
 }

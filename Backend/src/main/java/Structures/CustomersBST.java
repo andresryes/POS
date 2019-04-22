@@ -7,8 +7,10 @@ import java.lang.reflect.Array;
 
 public class CustomersBST {
 
+
     private static int length = 0;
     private static ArrayList<Customer> customers = new ArrayList<>();
+    private static Customer customer = new Customer();
     /* Class containing left and right child of current node and key value*/
     class Node
     {
@@ -30,29 +32,64 @@ public class CustomersBST {
     {
         root = null;
     }
-    // search function by ID
-    public Customer searchByID(String key){
-        return  search(root, key).key;
+
+    //search by ID
+    /*public Customer searchByID(String key){
+        return search(root, key).key;
+    }*/
+
+    public Customer searchByID(String id){
+        inorderSearch(id);
+        Customer customerToReturn = new Customer();
+        customerToReturn = customer;
+        customer = new Customer();
+        return  customerToReturn;
     }
 
-    //search function
+    // This method mainly calls InorderRec()
+    public void inorderSearch(String key)
+    {
+        inorderRecSearch(root, key);
+    }
+
+    // A utility function to do inorder traversal of BST
+    public void inorderRecSearch(Node root, String key)
+    {
+        if (root != null)
+        {
+            inorderRecSearch(root.left, key);
+            //System.out.println(root.key.getName().contains(key));
+            if(root.key.getIdCustomer()==Integer.parseInt(key)){
+                customer = root.key;
+            }
+            //System.out.print(root.key.getName() + " ");
+            inorderRecSearch(root.right, key);
+        }
+    }
+
+    // search function
     public Node search(Node root, String key)
     {
         // Base Cases: root is null or key is present at root
-        if (root==null || (root.key.getIdCustomer()+"").equals(key))
+        if (root==null || (root.key.getNit()+"").equals(key))
             return root;
 
         // val is greater than root's key
-        if ((root.key.getIdCustomer()+"").compareTo(key) > 0)
+        if ((root.key.getNit()+"").compareTo(key) > 0)
             return search(root.left, key);
 
         // val is less than root's key
         return search(root.right, key);
     }
 
+    public boolean edit(Customer newCustomer){
+        return edit(root, newCustomer);
+    }
+
     public boolean edit(Node root, Customer newCustomer){
-        Node foundNode = search(this.root, newCustomer.getIdCustomer()+"");
-        if(foundNode != null){
+        Customer foundCustomer = searchByID(newCustomer.getIdCustomer()+"");
+        Node foundNode = search(root,foundCustomer.getNit());
+        if(foundNode!=null){
             foundNode.key = newCustomer;
             return true;
         }else{
@@ -72,9 +109,9 @@ public class CustomersBST {
         if (root == null)  return root;
 
         /* Otherwise, recur down the tree */
-        if (key.getName().compareTo(root.key.getName()) < 0)
+        if (key.getNit().compareTo(root.key.getNit()) < 0)
             root.left = deleteRec(root.left, key);
-        else if (key.getName().compareTo(root.key.getName()) > 0)
+        else if (key.getNit().compareTo(root.key.getNit()) > 0)
             root.right = deleteRec(root.right, key);
 
             // if key is same as root's key, then This is the node
@@ -119,7 +156,6 @@ public class CustomersBST {
     /* A recursive function to insert a new key in BST */
     public Node insertRec(Node root, Customer key)
     {
-
         /* If the tree is empty, return a new node */
         if (root == null)
         {
@@ -128,11 +164,12 @@ public class CustomersBST {
         }
 
         /* Otherwise, recur down the tree */
-        if (key.getName().compareTo(root.key.getName()) < 0)
+        if (key.getNit().compareTo(root.key.getNit()) < 0) {
             root.left = insertRec(root.left, key);
-        else if (key.getName().compareTo(root.key.getName()) > 0)
+            //System.out.println("Insert");
+        }else if (key.getNit().compareTo(root.key.getNit()) > 0) {
             root.right = insertRec(root.right, key);
-
+        }
         /* return the (unchanged) node pointer */
         return root;
     }
@@ -155,16 +192,43 @@ public class CustomersBST {
         }
     }
 
+    // This method mainly calls InorderRec()
+    public void inorder(String key)
+    {
+        inorderRec(root, key);
+    }
+
+    // A utility function to do inorder traversal of BST
+    public void inorderRec(Node root, String key)
+    {
+        if (root != null)
+        {
+            inorderRec(root.left, key);
+            //System.out.println(root.key.getName().contains(key));
+            if(root.key.getName().contains(key)){
+                customers.add(root.key);
+            }
+            //System.out.print(root.key.getName() + " ");
+            inorderRec(root.right, key);
+        }
+    }
+
     public ArrayList<Customer> getList(){
         inorder();
         return customers;
     }
 
-    public Customer[] getTopCustomers(){
-        return new Customer[10];
+    public ArrayList<Customer> getListFiltered(String key){
+        inorder(key);
+        return customers;
     }
 
     public int getLength(){
         return length;
     }
+
+    public void cleanList(){
+        customers.clear();
+    }
+
 }

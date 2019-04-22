@@ -14,6 +14,9 @@ public class Customer {
         this.nit = nit;
     }
 
+    public Customer() {
+    }
+
     public int getIdCustomer() {
         return idCustomer;
     }

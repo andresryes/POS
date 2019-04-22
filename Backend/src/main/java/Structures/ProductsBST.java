@@ -70,11 +70,11 @@ public class ProductsBST {
     public Node search(Node root, String key)
     {
         // Base Cases: root is null or key is present at root
-        if (root==null || (root.key.getIdProduct()+"").equals(key))
+        if (root==null || (root.key.getName()+"").equals(key))
             return root;
 
         // val is greater than root's key
-        if ((root.key.getIdProduct()+"").compareTo(key) > 0)
+        if ((root.key.getName()+"").compareTo(key) > 0)
             return search(root.left, key);
 
         // val is less than root's key
@@ -165,7 +165,7 @@ public class ProductsBST {
         /* Otherwise, recur down the tree */
         if (key.getName().compareTo(root.key.getName()) < 0) {
             root.left = insertRec(root.left, key);
-            System.out.println("Insert");
+            //System.out.println("Insert");
         }else if (key.getName().compareTo(root.key.getName()) > 0) {
             root.right = insertRec(root.right, key);
         }
