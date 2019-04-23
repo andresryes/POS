@@ -1,6 +1,8 @@
 package Main;
 
 import Collections.Collections;
+import Models.Product;
+import Models.TransactionDetail;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.web.bind.annotation.*;
 import Models.Transaction;
@@ -52,24 +54,32 @@ public class TransactionController {
         System.out.println(total);
         System.out.println(transactions);
         String[] details =transactions.split(",");
+        TransactionDetail[] transactionDetails = new TransactionDetail[details.length/2];
+        int counter = 0;
+        double subtotal = 0;
         for(int i = 0; i <details.length-1;i=i+2){
             System.out.println("Producto: " + Collections.getInstance().getProducts().searchByID(details[i]).getName());
             System.out.println("Cantidad: " + details[i+1]);
             System.out.println("Subtotal: "+(Collections.getInstance().getProducts().searchByID(details[i]).getPrice()*Integer.parseInt(details[i+1])));
+            TransactionDetail transactionDetail = new TransactionDetail(i,  Integer.parseInt(details[i+1]), Collections.getInstance().getProducts().searchByID(details[i]), Collections.getInstance().getProducts().searchByID(details[i]).getPrice());
+            transactionDetails[counter] = transactionDetail;
+            subtotal+=transactionDetail.getSubtotal();
+            counter++;
         }
 
-        /*Transaction.setCategory(Collections.getInstance().getCategories().get(idCategory-1));
-        Transaction.setName(name);
-        Transaction.setPrice(price);
-        Transaction.setDescription(description);
-        Transaction.setIdTransaction(Collections.getInstance().getTransactions().getLength()+1);
-        Transaction.setImage(image);
-        Transaction.setStock(stock);*/
+        Transaction transaction = new Transaction();
+        transaction.setCustomer(Collections.getInstance().getCustomers().searchByID(idCustomer+""));
+        transaction.setUser(Collections.getInstance().getUsers().get(idUser-1));
+        transaction.setIdTransaction(Collections.getInstance().getTransactions().getLength()+1);
+        transaction.setTotal(subtotal);
+        transaction.setTransactions(transactionDetails);
+
+        Collections.getInstance().getTransactions().insert(transaction);
 
         //Collections.getInstance().getTransactions().insert(Transaction);
 
         //return Collections.getInstance().getTransactions().searchByID(Transaction.getIdTransaction()+"");
-        return null;
+        return Collections.getInstance().getTransactions().search(transaction.getIdTransaction()+"");
     }
 
 

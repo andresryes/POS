@@ -3,6 +3,10 @@ import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Product } from './product';
+import { Category } from './category';
+import { Customer } from './customer';
+import { Transaction } from './transaction';
+import { Place } from './place';
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -21,6 +25,38 @@ export class ApiService {
       .pipe(
         tap(products => console.log('Fetch products')),
         catchError(this.handleError('getProducts', []))
+      );
+  }
+
+  getCategories (): Observable<Category[]> {
+    return this.http.get<Category[]>(apiUrl+"categories")
+      .pipe(
+        tap(products => console.log('Fetch categories')),
+        catchError(this.handleError('getCategories', []))
+      );
+  }
+
+  getCustomers (): Observable<Customer[]> {
+    return this.http.get<Customer[]>(apiUrl+"customers")
+      .pipe(
+        tap(products => console.log('Fetch customers')),
+        catchError(this.handleError('getCustomers', []))
+      );
+  }
+
+  getPlaces (): Observable<Place[]> {
+    return this.http.get<Place[]>(apiUrl+"places")
+      .pipe(
+        tap(products => console.log('Fetch places')),
+        catchError(this.handleError('getPlaces', []))
+      );
+  }
+
+  getTransactions (): Observable<Transaction[]> {
+    return this.http.get<Transaction[]>(apiUrl+"transactions")
+      .pipe(
+        tap(products => console.log('Fetch transactions')),
+        catchError(this.handleError('getTransactions', []))
       );
   }
 

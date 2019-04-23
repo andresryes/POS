@@ -41,7 +41,6 @@ public class PlaceController {
     @PostMapping(Collections.route+"shortestPath")
     public LinkedList<Vertex> shortestPath(@RequestParam(value="source") int source,
                           @RequestParam(value="destination") int destination){
-
         Collections.getInstance().getPlacesGraph().execute(Collections.getInstance().getNodes().get(source));
         LinkedList<Vertex> path = Collections.getInstance().getPlacesGraph().getPath(Collections.getInstance().getNodes().get(destination));
 
@@ -55,20 +54,8 @@ public class PlaceController {
 
     /*@CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(Collections.route+"places")
-    public Place addPlace(@RequestParam(value="stock") int stock,
-                                      @RequestParam(value="price") double price,
-                                      @RequestParam(value="idCategory") int idCategory,
-                                      @RequestParam(value="image") String image,
-                                      @RequestParam(value="name") String name,
-                                      @RequestParam(value="description") String description){
+    public Place addPlace(@RequestParam(value="stock") int stock){
         Place Place = new Place();
-        /*Place.setCategory(Collections.getInstance().getCategories().get(idCategory-1));
-        Place.setName(name);
-        Place.setPrice(price);
-        Place.setDescription(description);
-        Place.setIdPlace(Collections.getInstance().getPlaces().getLength()+1);
-        Place.setImage(image);
-        Place.setStock(stock);*/
 
         //Collections.getInstance().getPlaces().insert(Place);
 

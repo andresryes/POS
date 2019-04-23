@@ -20,6 +20,14 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { TransactionsComponent } from './transactions/transactions.component';
+import { PlacesComponent } from './places/places.component';
+import { UsersComponent } from './users/users.component';
+import { CustomersComponent } from './customers/customers.component';
+import { NavbarComponent } from './template/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +35,15 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     ProductsComponent,
     ProductDetailComponent,
     ProductAddComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    CategoriesComponent,
+    TransactionsComponent,
+    PlacesComponent,
+    UsersComponent,
+    CustomersComponent,
+    NavbarComponent,
+    HomeComponent,
+    TransactionDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Product } from '../product';
+import {Place} from '../place';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-places',
+  templateUrl: './places.component.html',
+  styleUrls: ['./places.component.scss']
 })
-export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['prod_name', 'prod_price', 'category'];
-  data: Product[] = [];
+export class PlacesComponent implements OnInit {
+
+  data: Place[] = [];
   isLoadingResults = true;
+  displayedColumns: string[] = ['id', 'name'];
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.getProducts()
+    this.api.getPlaces()
       .subscribe(res => {
         this.data = res;
         console.log(this.data);
@@ -26,5 +27,4 @@ export class ProductsComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
-
 }

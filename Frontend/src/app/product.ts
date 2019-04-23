@@ -2,8 +2,7 @@ export class Product {
   idProduct: string;
   stock: string;
   price: string;
-  idCategory: string;
-  category: string;
+  category: Category;
   image: string;
   name: string;
   description: string;

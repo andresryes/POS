@@ -50,7 +50,7 @@ public class Transaction {
         this.transactions = transactions;
     }
 
-    public double isTotal() {
+    public double getTotal() {
         return total;
     }
 

@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Product } from '../product';
+import { Transaction } from '../transaction';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-transactions',
+  templateUrl: './transactions.component.html',
+  styleUrls: ['./transactions.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class TransactionsComponent implements OnInit {
 
-  displayedColumns: string[] = ['prod_name', 'prod_price', 'category'];
-  data: Product[] = [];
+  displayedColumns: string[] = ['id', 'customer', 'user', 'transactions','total'];
+  data: Transaction[] = [];
   isLoadingResults = true;
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.getProducts()
+    this.api.getTransactions()
       .subscribe(res => {
         this.data = res;
         console.log(this.data);

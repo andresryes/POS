@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Product } from '../product';
+import {Customer} from '../customer';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-customers',
+  templateUrl: './customers.component.html',
+  styleUrls: ['./customers.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class CustomersComponent implements OnInit {
 
-  displayedColumns: string[] = ['prod_name', 'prod_price', 'category'];
-  data: Product[] = [];
+  data: Customer[] = [];
   isLoadingResults = true;
+  displayedColumns: string[] = ['id', 'name', 'nit'];
 
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.getProducts()
+    this.api.getCustomers()
       .subscribe(res => {
         this.data = res;
         console.log(this.data);
@@ -26,5 +26,4 @@ export class ProductsComponent implements OnInit {
         this.isLoadingResults = false;
       });
   }
-
 }
