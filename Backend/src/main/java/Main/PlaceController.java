@@ -1,27 +1,28 @@
 package Main;
 
 import Collections.Collections;
+import Models.Vertex;
 import org.springframework.web.bind.annotation.*;
 import Models.Place;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 @RestController
 public class PlaceController {
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping(Collections.route+"Places")
-    public ArrayList<Place> Places(@RequestParam(value="filter", defaultValue="") String filter) {
+    @GetMapping(Collections.route+"places")
+    public List<Vertex> places(@RequestParam(value="filter", defaultValue="") String filter) {
         ArrayList<Place> list;
-
-        //Collections.getInstance().getPlaces().cleanList();
 
         //list = Collections.getInstance().getPlaces().getListFiltered(filter);
 
-        return null;
+        return Collections.getInstance().getNodes();
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @GetMapping(Collections.route+"Place/{id}")
-    public Place PlaceByID(@PathVariable String id) {
+    @GetMapping(Collections.route+"place/{id}")
+    public Place placeByID(@PathVariable String id) {
         Place toReturn = new Place();
         try{
             //toReturn = Collections.getInstance().getPlaces().searchByID(id);
@@ -37,7 +38,23 @@ public class PlaceController {
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
-    @PostMapping(Collections.route+"Places")
+    @PostMapping(Collections.route+"shortestPath")
+    public LinkedList<Vertex> shortestPath(@RequestParam(value="source") int source,
+                          @RequestParam(value="destination") int destination){
+
+        Collections.getInstance().getPlacesGraph().execute(Collections.getInstance().getNodes().get(source));
+        LinkedList<Vertex> path = Collections.getInstance().getPlacesGraph().getPath(Collections.getInstance().getNodes().get(destination));
+
+        if(path!=null){
+            return path;
+        }
+        else{
+            return new LinkedList<Vertex>();
+        }
+    }
+
+    /*@CrossOrigin(origins = "http://localhost:4200")
+    @PostMapping(Collections.route+"places")
     public Place addPlace(@RequestParam(value="stock") int stock,
                                       @RequestParam(value="price") double price,
                                       @RequestParam(value="idCategory") int idCategory,
@@ -56,8 +73,8 @@ public class PlaceController {
         //Collections.getInstance().getPlaces().insert(Place);
 
         //return Collections.getInstance().getPlaces().searchByID(Place.getIdPlace()+"");
-        return null;
-    }
+       /* return null*/
+    //}
 
 
     @CrossOrigin(origins = "http://localhost:4200")

@@ -1,7 +1,10 @@
 export class Product {
-  _id: string;
-  prod_name: string;
-  prod_desc: string;
-  prod_price: number;
-  updated_at: Date;
+  idProduct: string;
+  stock: string;
+  price: string;
+  idCategory: string;
+  category: string;
+  image: string;
+  name: string;
+  description: string;
 }

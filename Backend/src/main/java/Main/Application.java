@@ -56,7 +56,7 @@ public class Application {
         List<Edge> edges = Collections.getInstance().getEdges();
 
         for (int i = 0; i < 11; i++) {
-            Vertex location = new Vertex("Node_" + i, "Node_" + i);
+            Vertex location = new Vertex(""+i, "Place#" + i);
             nodes.add(location);
         }
 

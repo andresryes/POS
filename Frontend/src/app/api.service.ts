@@ -7,7 +7,7 @@ import { Product } from './product';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "http://localhost:8080/api/v1/products";
+const apiUrl = "http://localhost:8080/api/v1/";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getProducts (): Observable<Product[]> {
-    return this.http.get<Product[]>(apiUrl)
+    return this.http.get<Product[]>(apiUrl+"products")
       .pipe(
         tap(products => console.log('Fetch products')),
         catchError(this.handleError('getProducts', []))
@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   getProduct(id: number): Observable<Product> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiUrl}product/${id}`;
     return this.http.get<Product>(url).pipe(
       tap(_ => console.log(`fetched product id=${id}`)),
       catchError(this.handleError<Product>(`getProduct id=${id}`))

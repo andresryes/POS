@@ -1,6 +1,7 @@
 package Structures;
 
 import Models.Transaction;
+import Models.TransactionDetail;
 
 import java.util.ArrayList;
 
@@ -139,6 +140,35 @@ public class TransactionsBTree {
         return search(root, value);
     }
 
+    public void print(String key){
+        printBTree(root, key);
+    }
+
+    public void printBTree(Node node, String key){
+        for(int i=0; i<node.numberOfNodes;i++){
+            if(!node.isLeaf){
+                printBTree(node.children[i]);
+            }
+            //System.out.println(node.key[i]);
+            if(node.key[i].getCustomer().getName().contains(key)
+            || node.key[i].getUser().getUsername().contains(key)) {
+                if(!transactions.contains(node.key[i])){
+                    transactions.add(node.key[i]);
+                }
+            }
+            for(TransactionDetail transaction:node.key[i].getTransactions()){
+                if(transaction.getProduct().getName().contains(key)){
+                    if(!transactions.contains(node.key[i])){
+                        transactions.add(node.key[i]);
+                    }
+                }
+            }
+        }
+        if(!node.isLeaf){
+            printBTree(node.children[node.numberOfNodes]);
+        }
+    }
+
     public void print(){
         printBTree(root);
     }
@@ -159,6 +189,15 @@ public class TransactionsBTree {
     public ArrayList<Transaction> getList(){
         print();
         return transactions;
+    }
+
+    public ArrayList<Transaction> getFilteredList(String key){
+        print(key);
+        return transactions;
+    }
+
+    public void cleanList(){
+        transactions.clear();
     }
 
     public int getLength(){
