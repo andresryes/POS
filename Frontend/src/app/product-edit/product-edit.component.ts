@@ -27,7 +27,7 @@ export class ProductEditComponent implements OnInit {
 
   getProduct(id) {
     this.api.getProduct(id).subscribe(data => {
-      this._id = data._id;
+      this.id = data.idProduct;
       this.productForm.setValue({
       });
     });

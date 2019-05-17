@@ -70,7 +70,7 @@ export class ApiService {
 
   addProduct (product): Observable<Product> {
     return this.http.post<Product>(apiUrl, product, httpOptions).pipe(
-      tap((product: Product) => console.log(`added product w/ id=${product._id}`)),
+      tap((product: Product) => console.log(`added product w/ id=${product.idProduct}`)),
       catchError(this.handleError<Product>('addProduct'))
     );
   }

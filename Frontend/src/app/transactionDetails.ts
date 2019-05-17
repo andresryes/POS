@@ -1,7 +1,6 @@
 export class TransactionDetails {
-  idDetail:int;
-  quantity:int;
-  product:Product;
-  subtotal:double;
-
+  idDetail:any;
+  quantity:any;
+  product:any;
+  subtotal:any;
 }
