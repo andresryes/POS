@@ -207,7 +207,7 @@ public class TransactionsBTree {
 
 
     public void printBTreeG(Node node, Models.Node node1){
-        int i = 0;
+        /*int i = 0;
         while(node.key[i]!=null){
             node1.keys[i]=node.key[i];
             i++;
@@ -216,7 +216,7 @@ public class TransactionsBTree {
             Models.Node nodex = new Models.Node();
            //node.children[j].key[j]
         }
-
+*/
     }
 
     public Models.Node getGraphviz(){
