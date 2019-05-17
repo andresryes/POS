@@ -1,8 +1,10 @@
 package Main;
 
 import Collections.Collections;
+import Models.Node;
 import Models.Product;
 import Models.TransactionDetail;
+import Structures.TransactionsBTree;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.springframework.web.bind.annotation.*;
 import Models.Transaction;
@@ -136,5 +138,11 @@ public class TransactionController {
         }else{
             return false;
         }
+    }
+    @CrossOrigin(origins = "http://localhost:4200")
+    @GetMapping(Collections.route+"getGraph")
+    public Models.Node getGraph() {
+        Models.Node btree = Collections.getInstance().getTransactions().getGraphviz();
+        return btree;
     }
 }

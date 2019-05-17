@@ -1,5 +1,6 @@
 package Structures;
 
+import Models.Node;
 import Models.Transaction;
 import Models.TransactionDetail;
 
@@ -202,5 +203,25 @@ public class TransactionsBTree {
 
     public int getLength(){
         return length;
+    }
+
+
+    public void printBTreeG(Node node, Models.Node node1){
+        int i = 0;
+        while(node.key[i]!=null){
+            node1.keys[i]=node.key[i];
+            i++;
+        }
+        for(int j = 0; j<=node.numberOfNodes; j++){
+            Models.Node nodex = new Models.Node();
+           //node.children[j].key[j]
+        }
+
+    }
+
+    public Models.Node getGraphviz(){
+        Models.Node node = new Models.Node();
+        printBTreeG(root, node);
+        return node;
     }
 }

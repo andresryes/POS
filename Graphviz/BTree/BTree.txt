@@ -1,0 +1,20 @@
+{
+"keys":["7","11","15"],
+"children":[
+    {"keys":["4","5","6"],
+     "children": [
+        {"keys": ["1","2","3"]}
+    ]},
+    {"keys":["8","9","10"],
+     "children": [
+    ]},
+    {"keys":["12","13","14"],
+     "children": [
+    ]},
+    {"keys":["16","17","18"],
+     "children": [
+    ]}
+]
+}
+
+http://ysangkok.github.io/js-clrs-btree/btree.html
