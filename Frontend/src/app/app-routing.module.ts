@@ -13,6 +13,9 @@ import { NavbarComponent } from './template/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainComponent } from './main/main.component';
 import { AdminComponent } from './admin/admin.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { PaymentComponent } from './payment/payment.component';
 const routes: Routes = [
   {
     path: 'products',
@@ -64,9 +67,24 @@ const routes: Routes = [
     component: AdminComponent,
     data: { title: 'Admin' }
   },
+  {
+    path: 'welcome',
+    component: WelcomeComponent,
+    data: { title: 'Welcome' }
+  },
+  {
+    path: 'delivery',
+    component: DeliveryComponent,
+    data: { title: 'Welcome' }
+  },
+  {
+    path: 'payment',
+    component: PaymentComponent,
+    data: { title: 'Welcome' }
+  },
   { 
   path: '',
-  redirectTo: '/main',
+  redirectTo: '/welcome',
   pathMatch: 'full'
 }
 ];

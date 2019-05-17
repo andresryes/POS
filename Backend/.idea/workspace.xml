@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f27c2e0-2d49-42f8-ab97-3ac21bb72fc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/pos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/pos.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transactions/transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transactions/transactions.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/TransactionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+            <state relative-caret-position="1139">
+              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,10 +54,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,17 +136,17 @@
         <option value="$PROJECT_DIR$/src/main/java/Main/CategoryContoller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/PlaceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Transaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="121" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="120" />
     <option name="y" value="45" />
     <option name="width" value="1765" />
-    <option name="height" value="939" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -116,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,11 +203,20 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="POSBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Structures" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,16 +288,19 @@
       <workItem from="1556024966779" duration="6662000" />
       <workItem from="1558049418489" duration="1421000" />
       <workItem from="1558053369359" duration="736000" />
+      <workItem from="1558066972767" duration="8054000" />
+      <workItem from="1558083240319" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68003000" />
+    <option name="totallyTimeSpent" value="76667000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="97" y="36" width="1412" height="751" extended-state="0" />
+    <frame x="96" y="36" width="1412" height="752" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13239644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13683432" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -261,7 +310,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32148626" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32096773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -274,6 +323,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="JProfiler" order="15" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -444,26 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/CategoryContoller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -541,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/TransactionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="86" column="57" selection-start-line="86" selection-start-column="57" selection-end-line="86" selection-end-column="57" />
+        <state relative-caret-position="1139">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -553,6 +583,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

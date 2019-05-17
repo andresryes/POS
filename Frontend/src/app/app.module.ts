@@ -43,6 +43,8 @@ import { LineItemModalComponent } from './main/history/line-item-modal/line-item
 import { LineChartComponent } from './main/reports/line-chart/line-chart.component';
 import { PosService } from './pos.service';
 import { AdminComponent } from './admin/admin.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -71,7 +73,9 @@ import { AdminComponent } from './admin/admin.component';
     PageNotFoundComponent,
     LineItemModalComponent,
     LineChartComponent,
-    AdminComponent
+    AdminComponent,
+    DeliveryComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

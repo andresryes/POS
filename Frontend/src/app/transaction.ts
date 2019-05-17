@@ -1,7 +1,6 @@
 export class Transaction {
-  idTransaction:any;
-  customer:any;
-  user:any;
-  transactions:any;
-  total:any;
+  idCustomer:number;
+  idUser:number;
+  transactions:string;
+  total:number;
 }

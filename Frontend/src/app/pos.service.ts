@@ -6,7 +6,7 @@ import { Item } from './item';
 export class PosService {
 
   private ticket = TICKET;
-  private ticketSource = new BehaviorSubject<Item[]>(this.ticket);
+  private ticketSource = new BehaviorSubject<any[]>(this.ticket);
 
   private cartTotal = 0;
   private cartTotalSource = new BehaviorSubject<number>(this.cartTotal);
@@ -21,7 +21,7 @@ export class PosService {
 
   constructor() { }
 
-  changeTicket(ticket: Item[]) {
+  changeTicket(ticket: any[]) {
     this.ticketSource.next(ticket);
   }
 
@@ -36,5 +36,5 @@ export class PosService {
 }
 
 // Demo content
-const TICKET: Item[] = [
+const TICKET: any[] = [
 ];

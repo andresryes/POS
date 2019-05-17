@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { catchError, tap, map } from 'rxjs/operators';
 import { Product } from './product';
 import { Category } from './category';
@@ -75,6 +75,15 @@ export class ApiService {
     );
   }
 
+  addTransaction (transaction:Transaction, url:string):Observable<Transaction>{
+    console.log(transaction)
+    
+    return this.http.post<Transaction>(apiUrl+"transactions"+url, transaction, httpOptions).pipe(
+      tap((transaction: Transaction) => console.log(`added transaction w/ id=${transaction.total}`)),
+      catchError(this.handleError<Transaction>('addTransaction'))
+    );
+  }
+
   updateProduct (id, product): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.put(url, product, httpOptions).pipe(
@@ -84,7 +93,7 @@ export class ApiService {
   }
 
   deleteProduct (id): Observable<Product> {
-    const url = `${apiUrl}/${id}`;
+    const url = `${apiUrl}product/${id}`;
 
     return this.http.delete<Product>(url, httpOptions).pipe(
       tap(_ => console.log(`deleted product id=${id}`)),

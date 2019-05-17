@@ -71,7 +71,7 @@ public class TransactionController {
         transaction.setCustomer(Collections.getInstance().getCustomers().searchByID(idCustomer+""));
         transaction.setUser(Collections.getInstance().getUsers().get(idUser-1));
         transaction.setIdTransaction(Collections.getInstance().getTransactions().getLength()+1);
-        transaction.setTotal(subtotal);
+        transaction.setTotal(total);
         transaction.setTransactions(transactionDetails);
 
         Collections.getInstance().getTransactions().insert(transaction);

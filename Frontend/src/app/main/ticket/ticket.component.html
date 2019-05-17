@@ -21,7 +21,20 @@
     <h3 class="total">Total: {{cartTotal | currency:'USD':true}}</h3>
     <div class="flex flex-direction-row buttons">
       <button class="" mat-raised-button (click)="clearCart()">Clear</button>
-      <button class="checkout" mat-raised-button (click)="checkout()">Checkout</button>      
+      <button class="checkout" mat-raised-button (click)="checkout()" [routerLink]="['/payment']">Checkout</button>      
     </div>
   </mat-card-actions>
 </mat-card>
+<script>
+        $scope.checkoutModal = function () {
+            var modalInstance = $modal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'partials/checkoutModal.html',
+                controller: 'ModalInstanceCtrl'
+            });
+            modalInstance.items = $scope.items;
+            modalInstance.name = $scope.name;
+            modalInstance.address = $scope.address;
+            modalInstance.symbol = $scope.symbol;
+        };
+</script>

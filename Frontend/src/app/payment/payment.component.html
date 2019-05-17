@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+      <h3 class="page-header text-center">Review Order</h3><br>
+      <div class="table-responsive text-center">
+          <table class="table table-striped table-hover">
+              <tr data-ng-repeat="item in items">
+                  <!--td>{{item.name}}</td>
+                  <td>{{item.description}}</td>
+                  <td>Price: {{item.price | currency }}</td-->
+              </tr>
+          </table>
+          <div>
+              <img src='https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=bitcoin:?amount=' alt=''/><br>
+              <h3>Amount to Send:</h3>
+              <h3>Address:</h3>
+          </div>
+      </div>
+      <div ng-show="transactionIsSuccess" class="alert alert-success fade in">
+          <strong>Success!</strong> Your transaction has been received.
+      </div>
+
+      <div class="modal-footer">
+          <!--h3>Total: {{ total }}</h3-->
+          <button class="btn btn-warning" type="button" [routerLink]="['/main']">Pay With Bitcoin</button>
+          <div class="btn-group">
+              <button [routerLink]="['/main']" class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Pay With Altcoin<span class="caret"></span>
+              </button>
+          </div>
+          <button class="btn btn-danger" type="button" [routerLink]="['/main']">Cancel</button>
+      </div>
+      <ul>
+        <li *ngFor="let coin of shapeShiftAltcoins">
+            <img src="{{coin.image}}">
+            <p>{{coin.name}}</p>
+        </li>
+      </ul>
+  </div>
+</div>
