@@ -11,11 +11,18 @@ import { UsersComponent } from './users/users.component';
 import { CustomersComponent } from './customers/customers.component';
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MainComponent } from './main/main.component';
+import { AdminComponent } from './admin/admin.component';
 const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
     data: { title: 'List of Products' }
+  },
+  {
+    path: 'main',
+    component: MainComponent,
+    data: { title: 'Main' }
   },
   {
     path: 'categories',
@@ -52,10 +59,16 @@ const routes: Routes = [
     component: ProductEditComponent,
     data: { title: 'Edit Product' }
   },
-  { path: '',
-    redirectTo: '/products',
-    pathMatch: 'full'
-  }
+  {
+    path: 'admin',
+    component: AdminComponent,
+    data: { title: 'Admin' }
+  },
+  { 
+  path: '',
+  redirectTo: '/main',
+  pathMatch: 'full'
+}
 ];
 
 @NgModule({

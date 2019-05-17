@@ -1,0 +1,27 @@
+<mat-card class="ticket-section flex flex-direction-column justify-between">
+  <mat-card-title class="add-padding heading">Order Summary</mat-card-title>
+  <table class="items">
+    <tr class="table-header">
+      <th>Qty</th>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Modify</th>
+    </tr>
+    <tr *ngFor="let item of ticket" class="item">
+      <td>{{item.quantity}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price | currency:'USD':true}}</td>
+      <td>
+        <mat-icon (click)="addItem(item)" class="del">control_point</mat-icon>
+        <mat-icon (click)="subtractOne(item)" class="del">indeterminate_check_box</mat-icon>
+        <mat-icon (click)="removeItem(item)" class="del">cancel</mat-icon></td>
+    </tr>
+  </table>
+  <mat-card-actions class="summary flex flex-direction-row align-items-center justify-between">
+    <h3 class="total">Total: {{cartTotal | currency:'USD':true}}</h3>
+    <div class="flex flex-direction-row buttons">
+      <button class="" mat-raised-button (click)="clearCart()">Clear</button>
+      <button class="checkout" mat-raised-button (click)="checkout()">Checkout</button>      
+    </div>
+  </mat-card-actions>
+</mat-card>

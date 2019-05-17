@@ -1,0 +1,38 @@
+@import '../../app.component.scss';
+
+.container {
+  margin: 1.5rem;
+}
+
+.items {
+  width: 100%;
+}
+
+.item:hover {
+  background-color: rgb(190, 190, 190);
+  cursor: pointer;
+}
+
+.del:hover {
+  color: grey;
+}
+
+th {
+  font-family: $main-font;
+  text-align: left;
+}
+
+td, th {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    margin: 0;
+  }
+}

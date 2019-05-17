@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f27c2e0-2d49-42f8-ab97-3ac21bb72fc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/customer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/product-detail/product-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/product-detail/product-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/product-edit/product-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/product.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transactionDetails.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transactionDetails.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -114,11 +104,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="122" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="121" />
     <option name="y" value="45" />
-    <option name="width" value="1764" />
-    <option name="height" value="938" />
+    <option name="width" value="1765" />
+    <option name="height" value="939" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -126,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -181,6 +170,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +187,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -251,16 +241,17 @@
       <workItem from="1555979712330" duration="4485000" />
       <workItem from="1556024966779" duration="6662000" />
       <workItem from="1558049418489" duration="1421000" />
+      <workItem from="1558053369359" duration="736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67267000" />
+    <option name="totallyTimeSpent" value="68003000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <frame x="97" y="36" width="1412" height="751" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13025211" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13239644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -270,7 +261,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3230563" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32148626" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -561,7 +552,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>

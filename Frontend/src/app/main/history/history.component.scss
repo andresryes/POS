@@ -1,0 +1,17 @@
+@import '../../app.component.scss';
+
+.order-detail {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-item:hover {
+  background-color: rgb(190, 190, 190);
+  cursor: pointer;
+}

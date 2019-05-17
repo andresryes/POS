@@ -1,3 +1,7 @@
+<div class="container">
+  <app-navbar></app-navbar>
+</div>
+<div class="container">
 <div class="example-container mat-elevation-z8">
   <div class="example-loading-shade"
        *ngIf="isLoadingResults">
@@ -23,4 +27,5 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/categories/']"></tr>
     </table>
   </div>
+</div>
 </div>

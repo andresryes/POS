@@ -1,0 +1,51 @@
+@import '../../app.component.scss';
+
+.pos-section {
+  min-height: 343px;
+  border: 1px solid $main-color;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+}
+
+.heading {
+  color: $main-color;
+  font-family: $main-font;  
+}
+
+.menu {
+  margin: 0.25rem;
+}
+
+.item {
+  margin: 0.75rem;
+  font-family: $body-font;
+  border: 1px grey solid;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+}
+.item:hover {
+  background-color: grey;
+  color: white;
+  opacity: 0.6;
+}
+.item:active {
+  background-color: grey;
+  color: white;
+  opacity: 0.8;
+}
+
+.item-img {
+  height: 100px;
+  width: 122px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.item-name {
+  text-align: center;
+  padding: 0.5rem;
+}

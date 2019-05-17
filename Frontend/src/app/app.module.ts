@@ -13,7 +13,9 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from "@angular/material";
+  MatFormFieldModule,
+  MatMenuModule,
+  MatTabsModule,  MatDialogModule, MatSelectModule, MatListModule } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
@@ -28,6 +30,20 @@ import { CustomersComponent } from './customers/customers.component';
 import { NavbarComponent } from './template/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TransactionDetailsComponent } from './transaction-details/transaction-details.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { HistoryComponent } from './main/history/history.component';
+import { PosComponent } from './main/pos/pos.component';
+import { ReportsComponent } from './main/reports/reports.component';
+import { TicketComponent } from './main/ticket/ticket.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NavComponent } from './nav/nav.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LineItemModalComponent } from './main/history/line-item-modal/line-item-modal.component';
+import { LineChartComponent } from './main/reports/line-chart/line-chart.component';
+import { PosService } from './pos.service';
+import { AdminComponent } from './admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -43,10 +59,27 @@ import { TransactionDetailsComponent } from './transaction-details/transaction-d
     CustomersComponent,
     NavbarComponent,
     HomeComponent,
-    TransactionDetailsComponent
+    TransactionDetailsComponent,
+    LoginComponent,
+    MainComponent,
+    HistoryComponent,
+    PosComponent,
+    ReportsComponent,
+    TicketComponent,
+    WelcomeComponent,
+    NavComponent,
+    PageNotFoundComponent,
+    LineItemModalComponent,
+    LineChartComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
+    MatMenuModule,
+    MatListModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatTabsModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
@@ -62,7 +95,7 @@ import { TransactionDetailsComponent } from './transaction-details/transaction-d
     MatCardModule,
     MatFormFieldModule
   ],
-  providers: [],
+  providers: [PosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,31 @@
+<div color="primary" class="navbar flex flex-direction-row align-items-center">
+  <div class="flex flex-direction-row titles">
+    <h1 routerLink="/welcome" class="title add-margin">PoS</h1>
+    <h2 class="subtitle add-margin"></h2>
+  </div>
+
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</div>
+
+<!-- Mobile Menu -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/main']">
+    <mat-icon>shopping_cart</mat-icon>
+    <span>Point of Sale</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/products']">
+    <mat-icon>perm_identity</mat-icon>
+    <span>Admin</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/categories']">
+    <mat-icon>multiline_chart</mat-icon>
+    <span>Reports</span>
+  </button>
+  <button mat-menu-item routerLink="/" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

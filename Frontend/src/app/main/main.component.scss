@@ -1,0 +1,39 @@
+@import '../app.component.scss';
+
+.ticket {
+  min-width: 320px;
+
+}
+
+.pos {
+  min-width: 320px;
+
+}
+
+.content {
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 425px) {
+  .pos {
+    width: 92%;
+  }
+  .ticket {
+    width: 92%;
+  }
+  .bottom-content {
+    width: 92%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pos {
+    width: 45%;
+  }
+  .ticket {
+    width: 45%;
+  }
+  .bottom-content {
+    width: 92%;
+  }
+}
