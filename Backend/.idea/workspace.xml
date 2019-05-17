@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f27c2e0-2d49-42f8-ab97-3ac21bb72fc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Models/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/Application.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -86,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,18 +154,17 @@
         <option value="$PROJECT_DIR$/src/main/java/Main/CategoryContoller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/PlaceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Transaction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/Models/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main/Application.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="120" />
-    <option name="y" value="45" />
-    <option name="width" value="1765" />
-    <option name="height" value="940" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="991" />
+    <option name="width" value="938" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -311,18 +307,18 @@
       <workItem from="1558049418489" duration="1421000" />
       <workItem from="1558053369359" duration="736000" />
       <workItem from="1558066972767" duration="8054000" />
-      <workItem from="1558083240319" duration="6596000" />
+      <workItem from="1558083240319" duration="8777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82653000" />
+    <option name="totallyTimeSpent" value="84834000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-7" width="1488" height="878" extended-state="7" />
+    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12955183" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.021008404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -332,7 +328,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26675603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26675603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -639,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

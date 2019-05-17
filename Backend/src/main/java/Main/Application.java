@@ -20,17 +20,32 @@ public class Application {
 
     public static void initializedProgram(){
         //Products
-        for(int i = 1; i<11; i++){
-            Collections.getInstance().getProducts().insert(new Product(i, i+10, i*50, new Category(1, "technology"), "resources/image.png", "iPhone" + i, "this is an iPhone"));
-        }
+        Collections.getInstance().getProducts().insert(new Product(1, 100, 10.50, new Category(2, "beverage"), "../assets/americano.jpg", "American", "coffee"));
+        Collections.getInstance().getProducts().insert(new Product(2, 210, 8.60, new Category(1, "food"), "./assets/bacon-gouda.jpg", "Bacon", "sandwich with bacon"));
+        Collections.getInstance().getProducts().insert(new Product(3, 310, 9.70, new Category(1, "food"), "../assets/bagel.jpg", "Bagel", "this is a bagel"));
+        Collections.getInstance().getProducts().insert(new Product(4, 410, 13.50, new Category(1, "food"), "../assets/blueberry-oatmeal.jpg", "Blueberry", "this is a blueberry oatmeal"));
+        Collections.getInstance().getProducts().insert(new Product(5, 500, 21.90, new Category(2, "beverage"), "../assets/cappuccino.jpg", "Cappuccino", "this is a cappuccino"));
+        Collections.getInstance().getProducts().insert(new Product(6, 800, 14.50, new Category(1, "food"), "../assets/chocolate-croissant.jpg", "Chocolate", "this is a croissant"));
+        Collections.getInstance().getProducts().insert(new Product(7, 410, 13.50, new Category(1, "food"), "../assets/chorizo.jpg", "Sandwich", "this is a sandwich"));
+        Collections.getInstance().getProducts().insert(new Product(8, 510, 7.50, new Category(2, "beverage"), "../assets/cortado.jpg", "Cortado", "this is a coffee"));
+        Collections.getInstance().getProducts().insert(new Product(9, 410, 13.50, new Category(1, "food"), "../assets/croissant.jpg", "Croissant", "this is a sandwich"));
+        Collections.getInstance().getProducts().insert(new Product(10, 510, 7.50, new Category(2, "beverage"), "../assets/drip-coffee.jpg", "Drip Coffee", "this is a coffee"));
+        Collections.getInstance().getProducts().insert(new Product(11, 510, 9.50, new Category(2, "beverage"), "../assets/latte.jpg", "Latte", "this is a coffee"));
+        Collections.getInstance().getProducts().insert(new Product(12, 510, 10.50, new Category(2, "beverage"), "../assets/matcha-latte.jpg", "Matcha Latte", "this is a coffee"));
+        Collections.getInstance().getProducts().insert(new Product(13, 410, 12.50, new Category(1, "food"), "../assets/pumpkin-scone.jpg", "Pumpkin Scone", "this is a Scone"));
+        Collections.getInstance().getProducts().insert(new Product(14, 510, 12.50, new Category(2, "beverage"), "../assets/tea.jpg", "Tea", "this is a tea"));
+        Collections.getInstance().getProducts().insert(new Product(15, 410, 22.50, new Category(1, "food"), "../assets/sausage-egg.jpg", "Sausage egg", "this is a sausage egg"));
+        Collections.getInstance().getProducts().insert(new Product(16, 510, 16.50, new Category(2, "beverage"), "../assets/tea-latte.jpg", "Tea Latte", "this is a tea latte"));
+
+
 
         //Categories
-        Collections.getInstance().getCategories().add(new Category(1, "technology"));
-        Collections.getInstance().getCategories().add(new Category(2, "home"));
+        Collections.getInstance().getCategories().add(new Category(1, "food"));
+        Collections.getInstance().getCategories().add(new Category(2, "beverage"));
 
         //Customers
         Collections.getInstance().getCustomers().insert(new Customer(1, "Andres Bolanos", "City", "94761795"));
-        Collections.getInstance().getCustomers().insert(new Customer(2, "Gabryela Hernandez", "City", "1745972"));
+        Collections.getInstance().getCustomers().insert(new Customer(2, "Jon Snow", "City", "1745972"));
 
         //Users
         Collections.getInstance().getUsers().add(new User(1, "admin", "andresryes", "12345"));
