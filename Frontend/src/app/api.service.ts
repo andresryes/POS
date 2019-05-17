@@ -84,6 +84,13 @@ export class ApiService {
     );
   }
 
+  getRoute (url:string):Observable<any>{
+    return this.http.post<any>(apiUrl+url, null, httpOptions).pipe(
+      tap((transaction: Transaction) => console.log("route")),
+      catchError(this.handleError<Transaction>('getRoute'))
+    );
+  }
+
   updateProduct (id, product): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.put(url, product, httpOptions).pipe(

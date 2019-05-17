@@ -1,3 +1,22 @@
-<p>
-  delivery works!
-</p>
+<div class="flex align-items-center justify-center container">
+  <mat-form-field>
+    <mat-label color=warn>Select an option</mat-label>
+    <mat-select [(value)]="selected2">
+      <mat-option *ngFor="let place of places" value={{place.id}}>{{place.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button  (click)="calculate()" color="primary" class="add-margin">Calculate</button>  
+  <mat-form-field>
+    <mat-label color=warn>Select an option</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option *ngFor="let place of places" value={{place.id}}>{{place.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+<div class="container" style="margin-top:-15%;">
+
+  <p>Route:</p>
+  <p *ngFor="let place of route">{{place.name}} -> </p>
+
+</div>

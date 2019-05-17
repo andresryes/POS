@@ -9,6 +9,14 @@ button {
   height: 2.5rem;
 }
 
+mat-form-field{
+    background: #000255;
+    width: 10rem;
+    margin: 10%;
+    height: 2.5rem;
+    margin-top: -10%;
+}
+
 @media screen and (max-width: 425px) {
   .container {
     flex-direction: column;

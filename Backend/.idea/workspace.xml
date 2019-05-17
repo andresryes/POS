@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f27c2e0-2d49-42f8-ab97-3ac21bb72fc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/history/history.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/pos/pos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/main/ticket/ticket.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/pos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/pos.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transaction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/transactions/transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/transactions/transactions.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/welcome/welcome.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/src/app/delivery/delivery.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/src/app/delivery/delivery.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Structures/TransactionsBTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -66,10 +51,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main/PlaceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="120" />
     <option name="y" value="45" />
     <option name="width" value="1765" />
@@ -289,18 +289,18 @@
       <workItem from="1558049418489" duration="1421000" />
       <workItem from="1558053369359" duration="736000" />
       <workItem from="1558066972767" duration="8054000" />
-      <workItem from="1558083240319" duration="610000" />
+      <workItem from="1558083240319" duration="1956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76667000" />
+    <option name="totallyTimeSpent" value="78013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="96" y="36" width="1412" height="752" extended-state="1" />
+    <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13683432" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12955183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -310,7 +310,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32096773" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26675603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -532,16 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/PlaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Structures/PlacesGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -579,13 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -600,6 +583,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="162" column="21" selection-start-line="162" selection-start-column="21" selection-end-line="162" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/PlaceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="42" column="78" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
